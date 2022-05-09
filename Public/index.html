@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 		<link rel="stylesheet" href="css/style.css" />
-		<title>anonymous web app Chat </title>
+		<title>AnyTime Chat </title>
 	</head>
 	<body>
 		<div class="join-container">
@@ -27,24 +27,40 @@
 					</div>
 					<div class="form-control">
 						<label for="room">Room</label>
-						<!-- <select name="room" id="room">
+						<select name="room" id="room">
 							<option value="Fun">Fun</option>
 							<option value="Serious">Serious</option>
 							<option value="Private">Private</option>
 							<option value="Money">Money</option>
-							<label for="room">Room</label>
 						
-						
-						</select> -->
-						<input placeholder="Enter Room Name..." name = "room" id = "room" >
+						</select>
 					</div>
 					<button type="submit" class="btn">Start Chat</button>
 				</form>
+				<div><p> <h2 style = "color: rgb(27, 13, 146); font-size:30px;" align = "center">OR</h2></p></div>
+
+				<form action="chat.html"><div class="form-container sign-in-container">
+					<!-- <form action='/login' method="POST"> -->
+						<label for="username">Sign In</label>
+						<input
+						 placeholder="username" type="username" name="username" required>
+						<input placeholder="password" type="password" id="passWord" required>
+					</div>
+					<div class="form-control">
+						<label for="room">Room</label>
+						<input placeholder="Enter Room Name..." name = "room" id = "room" required>
+					</div>
+						<br><button class="btn" value="Login">Sign In</button>
+						<br><a href="#" style = "color: rgb(27, 13, 146); font-size:12px; border-bottom:1px dotted">Forgot your password?</a></br>
+
+					</form>
 				
+					<p> </p>	
+					<form method="get" action="/Public/sigup.html">
+							<button type="submit" class="btn">Sign Up</button>
+						</form>
 					
 			</main>
 		</div>
 	</body>
-
-
 </html>

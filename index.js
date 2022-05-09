@@ -48,7 +48,7 @@ io.on('connection', socket => {
         
         //Broadcast when a user connects to everyone but user
         //Will make the user added a random one
-        socket.broadcast.to(user.room).emit('message', formatMessage(botMessage, `A \"${user.username}\"  appeared`));
+        socket.broadcast.to(user.room).emit('message', formatMessage(botMessage, `\"${user.username}\"  joined the chat`));
 
 
         //Send users and room info
@@ -79,7 +79,7 @@ io.on('connection', socket => {
         const user = userLeave(socket.id);
 
         if(user){
-            io.to(user.room).emit('message', formatMessage(botMessage, `A \"${user.username}\" has left the chat`))
+            io.to(user.room).emit('message', formatMessage(botMessage, `\"${user.username}\" has left the chat`))
 
             //Send users and room info
             io.to(user.room).emit('roomUsers',{ 
